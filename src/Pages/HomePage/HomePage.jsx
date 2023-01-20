@@ -61,7 +61,8 @@ tabIndex={0}>
 </div>
 <div className="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
 tabIndex={0}>
-{/* embed image- coming soon */}
+   <img src="https://github.com/KholodKhadeja/altaqwaLearning-client/blob/main/src/images/building%20page.png?raw=true" 
+   className="img-fluid" alt="صفحة قيد التطوير"/>
 </div>
 <div className="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
 tabIndex={0}>
