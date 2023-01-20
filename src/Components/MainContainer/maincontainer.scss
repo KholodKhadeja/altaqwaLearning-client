@@ -1,0 +1,45 @@
+@import "../../App.scss";
+
+.nav{
+    font-size: fs-6 text !important;
+    border-top-left-radius: $border-radius-v;
+    border-top-right-radius: $border-radius-v;
+    padding: 0.5em !important;
+    width: 100% !important;
+    background-color: $primary-green !important;
+    color: $primary-green;
+    .nav-item{
+        width: 25% !important;
+        color: $basic-white !important;
+        margin-bottom: -0.5em !important;
+        button{
+            width: 100% !important;
+        }
+        .nav-link{
+            text-decoration: none !important;  color: $basic-white !important;
+          }
+        .active{
+            color: $primary-green !important;
+        }
+    }
+}
+
+.accordion{
+    margin: $margin-btm  auto !important;
+    width: 95% !important;
+    border-bottom:  none !important;
+}
+
+.tab-content{
+    // border-bottom: none !important;
+    border: none !important;
+}
+.youtube-vid{
+    width: 25em;
+    height: 17em;
+}
+
+.shadow-lg{
+    border-bottom-right-radius: $border-radius-v !important;
+    border-bottom-left-radius: $border-radius-v !important;
+}

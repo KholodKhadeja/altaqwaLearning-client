@@ -1,0 +1,15 @@
+@import "../../App.scss";
+
+.container-text{
+    position: relative;
+    text-align: center;
+    margin-bottom: $margin-btm;
+}
+
+.centered{
+    width: fit-content !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
