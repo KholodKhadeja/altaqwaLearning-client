@@ -1,19 +1,17 @@
 import React from 'react';
 
-const AccordionItemComponent = ({lessonName, youtubeUrl, pdfLink, pdfDesc, vocalLink, vocalDesc}) => {
+const AccordionItemComponent = ({key,lessonName, youtubeUrl, pdfLink, pdfDesc, vocalLink, vocalDesc}) => {
     return (
-  <div class="accordion-item">
-  <h2 class="accordion-header" id="headingOne">
-    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+  <div className="accordion-item">
+  <h2 className="accordion-header" id="headingOne">
+    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
      aria-expanded="true" aria-controls="collapseOne">  {lessonName} </button>
   </h2>
-  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+  <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne"
    data-bs-parent="#accordionExample">
-    <div class="accordion-body">
+    <div className="accordion-body">
       <div className='lesson-body-lesson'>
-      <iframe className='youtube-vid' src={youtubeUrl}
-       frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media;gyroscope; picture-in-picture; web-share" allowfullscreen>
+      <iframe className='youtube-vid' src={youtubeUrl}>
        </iframe>
        <div className='d-flex flex-column'>
           <a className='d-flex' href={pdfLink}>
