@@ -47,7 +47,7 @@ tabIndex={0}>
 {/* **********************ACCORDION************************* */}
 <div className="accordion" id="accordionExample">
     {currentLessons.map((item)=>(
-        <AccordionItemComponent key={"lesson"+item._id}
+        <AccordionItemComponent key={"less"+item._id}
         lessonName={item.lessonName}
         youtubeUrl={item.youtubeUrl}
         pdfLink={item.pdfLink}
@@ -58,23 +58,32 @@ tabIndex={0}>
     ))}
       
 {/* *******************************the end of the accordion ******************************** */}
-</div>
+</div></div>
+
 <div className="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
-tabIndex={0}>
+tabIndex={1}>
+    {/* courses tab */}
    <img src="https://github.com/KholodKhadeja/altaqwaLearning-client/blob/main/src/images/building%20page.png?raw=true" 
    className="img-fluid" alt="صفحة قيد التطوير"/>
 </div>
+
 <div className="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
-tabIndex={0}>
-   {/* embed image- coming soon */}
+tabIndex={2}>
+    {/* book tab */}
+    <ul class="list-group">
+  <li class="list-group-item"><a href="https://archive.org/details/WAQmkaim">
+    ماذا خسر العالم بانحطاط المسلمين</a></li>
+</ul>
 </div>
+
 <div className="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab"
-tabIndex={0}>
-  {/* embed image- coming soon */}
+tabIndex={3}>
+   <img src="https://github.com/KholodKhadeja/altaqwaLearning-client/blob/main/src/images/building%20page.png?raw=true" 
+   className="img-fluid" alt="صفحة قيد التطوير"/>
 </div>
 </div>
 </div>
-</div>
+
     </Fragment>
     );
 }
