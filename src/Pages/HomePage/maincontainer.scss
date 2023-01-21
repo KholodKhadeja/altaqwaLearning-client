@@ -9,7 +9,7 @@
     background-color: $primary-green !important;
     color: $primary-green;
     .nav-item{
-        width: 25% !important;
+        width: 33% !important;
         color: $basic-white !important;
         margin-bottom: -0.5em !important;
         button{
@@ -25,9 +25,9 @@
 }
 
 .accordion{
+    padding:$margin-btm ;
     margin: $margin-btm  auto !important;
     width: 95% !important;
-    border-bottom:  none !important;
 }
 
 .tab-content{
