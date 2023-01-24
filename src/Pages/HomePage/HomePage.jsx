@@ -25,23 +25,44 @@ const HomePage = () => {
         <div className='shadow-lg mb-3'>
         <ul className="nav nav-tabs fw-semibold" id="myTab" role="tablist">
 <li className="nav-item" role="presentation">
-<button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
- role="tab" aria-controls="home-tab-pane" aria-selected="true">الدروس</button>
+<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+  عن البرنامج</button>
 </li>
 
 <li className="nav-item" role="presentation">
-<button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" 
-type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"> كتب وروابط</button>
+<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" 
+    aria-controls="pills-profile" aria-selected="false">الدروس</button>
 </li>
-<li className="nav-item" role="presentation">
-<button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" 
-type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">اختبارات</button>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab"
+     aria-controls="pills-contact" aria-selected="false">كتب</button>
 </li>
 </ul>
-<div className="tab-content" id="myTabContent">
-<div className="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" 
-tabIndex={0}>
-{/* **********************ACCORDION************************* */}
+
+
+<div className="tab-content" id="pills-tabContent">
+<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabIndex="0">
+    <p className="basic-parag">
+      <b>
+    برنامج العلم الشرعي: </b><br/>
+التعليم عبارة عن محاضرة أسبوعية، في كل محاضرة ندرس ثلاثة علوم شرعية، وكل علم من هذه العلوم ينتهي خلال شهر أو شهر ونصف.. ثم نبدأ بعلوم أخرى..<br/>
+فخلال سنة نكون قد حصّلنا قرابة الـ 9 علوم إسلامية أقل أو أكثر. (من عقيدة، وفقه، وتاريخ، وسيرة، وعلوم قرآن، وعلوم الحديث، والأصول والقواعد الفقهية، واللغة العربية..الخ)<br/>
+وخلال هذه السنة ستُقام امتحانات لكل علم وشهادة رمزية تفيد تخطي المتعلم هذه المرحلة من التعلُّم (وجوائز لمَن يجتاز).<br/>
+وخلال هذه السنة سيتم وضع برنامج قرائي (مطالعة ذاتية لكتب متنوعة في العلم الشرعي) مع محفزات وتشجيعات وجوائز ..<br/>
+نسأل الله أن يوفقنا ويعيننا. <br/>
+مكان التعليم الوجاهي: في مدينة الطيرة المثلث.<br/>
+يشرف الاستاد مهدي قاسم - إمام وخطيب مسجد التقوى  على المساق.<br/>
+<b>
+سيتم حتلنة الموقع بالمواد التعليمية بشكل أسبوعي.</b><br/>
+    </p>
+</div>
+
+
+<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabIndex="0">
+  <p className="basic-parag">
+    <br/>
+    لمعاينة محتوى الدروس، يجب النقر على عنوان كل درس</p>
 <div className="accordion mb-2" id="accordionExample">
     {currentLessons.map((item)=>(
         <AccordionItemComponent key={"less"+item._id}
@@ -54,24 +75,20 @@ tabIndex={0}>
           num={item.num}
         />
     ))}
-      
-{/* *******************************the end of the accordion ******************************** */}
-</div></div>
+      </div>
+</div>
 
-
-
-<div className="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
-tabIndex={0}>
-    {/* book tab */}
+<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabIndex="0">
     <ul class="list-group">
   <li class="list-group-item"><a href="https://archive.org/details/WAQmkaim">
     ماذا خسر العالم بانحطاط المسلمين</a></li>
-</ul>
-</div>
 
-<div className="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab"
-tabIndex={0}>
-   <p>محتوى هذا الصفحة متوفر للأعضاء فقط</p>
+    <li class="list-group-item"><a href="https://archive.org/details/WAQmkaim">
+    ماذا خسر العالم بانحطاط المسلمين</a></li>
+
+    <li class="list-group-item"><a href="https://archive.org/details/WAQmkaim">
+    ماذا خسر العالم بانحطاط المسلمين</a></li>
+</ul>
 </div>
 </div>
 </div>

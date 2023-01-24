@@ -26,7 +26,7 @@
 
 .accordion{
     padding:$margin-btm ;
-    margin: $margin-btm  auto !important;
+    margin: 0.5em auto !important;
     width: 95% !important;
 }
 
@@ -42,4 +42,10 @@
 .shadow-lg{
     border-bottom-right-radius: $border-radius-v !important;
     border-bottom-left-radius: $border-radius-v !important;
+}
+
+.basic-parag{
+    text-align: right !important;
+    padding: 0.5em !important;
+    margin-bottom: -1em !important;
 }
