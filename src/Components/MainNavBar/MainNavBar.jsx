@@ -18,7 +18,7 @@ const MainNavBar = () => {
           <a className="nav-link active fs-6 text"href="#">الرئيسية</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link fs-6 text" href="#">من نحن؟</a>
+          <a className="nav-link fs-6 text" href="#">اختبارات</a>
         </li>
         <li className="nav-item">
         <button type="button" className="fs-6 text btn btn-login btn-success">تسجيل الدخول</button>
