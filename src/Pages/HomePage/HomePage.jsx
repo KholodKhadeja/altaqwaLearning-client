@@ -83,11 +83,12 @@ const HomePage = () => {
   <li class="list-group-item"><a href="https://archive.org/details/WAQmkaim">
     ماذا خسر العالم بانحطاط المسلمين</a></li>
 
+    <li class="list-group-item"><a href="https://ar.islamway.net/book/19058/%D9%84%D8%A7-%D8%A5%D9%84%D9%87-%D8%A5%D9%84%D8%A7-%D8%A7%D9%84%D9%84%D9%87-%D8%B9%D9%82%D9%8A%D8%AF%D8%A9-%D9%88%D8%B4%D8%B1%D9%8A%D8%B9%D8%A9-%D9%88%D9%85%D9%86%D9%87%D8%A7%D8%AC-%D8%AD%D9%8A%D8%A7%D8%A9">
+    لا إله إلا الله عقيدة وشريعة ومنهاج حياة
+  </a></li>
+{/* 
     <li class="list-group-item"><a href="https://archive.org/details/WAQmkaim">
-    ماذا خسر العالم بانحطاط المسلمين</a></li>
-
-    <li class="list-group-item"><a href="https://archive.org/details/WAQmkaim">
-    ماذا خسر العالم بانحطاط المسلمين</a></li>
+    ماذا خسر العالم بانحطاط المسلمين</a></li> */}
 </ul>
 </div>
 </div>
