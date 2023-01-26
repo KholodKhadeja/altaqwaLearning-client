@@ -20,11 +20,11 @@ const AccordionItemComponent = ({key,lessonName, youtubeUrl, pdfLink, pdfDesc, v
           <p className=''>{pdfDesc}</p></a>
         <div className='d-flex align-items-center'>
           {
-            !vocalLink && <a className='d-flex' href={vocalLink}>
+            vocalLink && <a className='d-flex' href={vocalLink}>
             <img src="https://raw.githubusercontent.com/KholodKhadeja/Masjed-altaqwa-learning/8c50e78b606104cada5e985a22d07b648b1bb8d2/src/images/Voice.svg"/>
             <p>{vocalDesc}</p></a>
           }
-          { vocalLink &&  <p className='not-exist-text'>لا يتوفر تسجيل صوتي للدرس</p>}
+          { !vocalLink &&  <p className='not-exist-text'>لا يتوفر تسجيل صوتي للدرس</p>}
           </div>
        </div>
       </div>
