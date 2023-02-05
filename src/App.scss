@@ -2,6 +2,31 @@
   text-align: center;
 }
 
+.accordion-button{
+  width: fit-content  !important;
+  justify-self: flex-start !important;
+}
+.lesson-body-lesson{
+  display: flex;flex-direction: column;
+ align-items: flex-start !important;
+}
+.file-item{
+  display: flex;
+  align-items: center !important;
+  flex-direction: row;
+   img{
+    justify-self:center !important ;
+    width: 30px !important;
+    height: 30px !important;
+  }
+  p{
+    justify-self: flex-end !important;
+  }
+}
+.list-group{
+  list-style-type: circle !important;
+  text-align: right !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

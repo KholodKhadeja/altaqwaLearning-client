@@ -4,8 +4,10 @@ import axios from 'axios';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
+import { BrowserRouter } from 'react-router-dom';
 
 /* config axios */
 axios.defaults.baseURL = `https://server-masjed-eltaqwa.onrender.com/`;
@@ -25,7 +27,9 @@ axios.interceptors.request.use((config) => {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <BrowserRouter>
     <App />
+  </BrowserRouter>
 );
 
 reportWebVitals();

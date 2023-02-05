@@ -2,7 +2,8 @@ import axios from "axios";
 import { Fragment, useState, useEffect } from "react";
 import AccordionItemComponent from "../../Components/AccordionItem/AccordionItem.component";
 import "./maincontainer.scss";
-
+import { Accordion } from "react-bootstrap";
+import NewAccordionItem from "Components/AccordionItem/NewAccordionItem";
 
 let lessonsArray = [];
 const HomePage = () => {
@@ -25,24 +26,24 @@ const HomePage = () => {
         <div className='shadow-lg mb-3'>
         <ul className="nav nav-tabs fw-semibold" id="myTab" role="tablist">
 <li className="nav-item" role="presentation">
-<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+<button className="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
   عن البرنامج</button>
 </li>
 
 <li className="nav-item" role="presentation">
-<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" 
+<button className="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" 
     aria-controls="pills-profile" aria-selected="false">الدروس</button>
 </li>
 
-<li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab"
+<li className="nav-item" role="presentation">
+    <button className="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab"
      aria-controls="pills-contact" aria-selected="false">كتب</button>
 </li>
 </ul>
 
 
 <div className="tab-content" id="pills-tabContent">
-<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabIndex="0">
+<div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabIndex="0">
     <p className="basic-parag">
       <b>
     برنامج العلم الشرعي: </b><br/>
@@ -59,13 +60,16 @@ const HomePage = () => {
 </div>
 
 
-<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabIndex="0">
+<div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabIndex="0">
   <p className="basic-parag">
     <br/>
-    لمعاينة محتوى الدروس، يجب النقر على عنوان كل درس</p>
-<div className="accordion mb-2" id="accordionExample">
-    {currentLessons.map((item)=>(
-        <AccordionItemComponent key={"less"+item._id}
+    لمعاينة المستندات المرفقة لكل درس، يجب النقر على عنوان كل درس،    <br/>
+    تتوفر مستندات  تلخيصيّة لمحاضرة الفقة ومحاضرة العقيدة كل على حدة.
+     </p>
+    <Accordion defaultActiveKey="0">
+      {currentLessons.map((item, index)=>(
+        <NewAccordionItem key={"less"+index}
+        eventKey={index + 1}
         lessonName={item.lessonName}
         youtubeUrl={item.youtubeUrl}
         pdfLink={item.pdfLink}
@@ -75,17 +79,24 @@ const HomePage = () => {
           num={item.num}
         />
     ))}
-      </div>
+    </Accordion>
 </div>
 
-<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabIndex="0">
-    <ul class="list-group">
-  <li class="list-group-item"><a href="https://archive.org/details/WAQmkaim">
+<div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabIndex="0">
+    <ul className="list-group">
+  <li className="list-group-item"><a href="https://archive.org/details/WAQmkaim">
     ماذا خسر العالم بانحطاط المسلمين</a></li>
 
-    <li class="list-group-item"><a href="https://ar.islamway.net/book/19058/%D9%84%D8%A7-%D8%A5%D9%84%D9%87-%D8%A5%D9%84%D8%A7-%D8%A7%D9%84%D9%84%D9%87-%D8%B9%D9%82%D9%8A%D8%AF%D8%A9-%D9%88%D8%B4%D8%B1%D9%8A%D8%B9%D8%A9-%D9%88%D9%85%D9%86%D9%87%D8%A7%D8%AC-%D8%AD%D9%8A%D8%A7%D8%A9">
-    لا إله إلا الله عقيدة وشريعة ومنهاج حياة
+    <li className="list-group-item"><a 
+    href="https://www.alukah.net/library/0/152470/%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A3%D9%86-%D9%84%D8%A7-%D8%A5%D9%84%D9%87-%D8%A5%D9%84%D8%A7-%D8%A7%D9%84%D9%84%D9%87-pdf/">
+    شهادة أن لا إله إلا الله
   </a></li>
+
+  <li className="list-group-item"><a 
+    href="https://www.kotobati.com/book/reading/37ffcce2-e8c2-4ced-88e4-3295cb026e42">
+    الطريق إلى القرآن
+  </a></li>
+  
 {/* 
     <li class="list-group-item"><a href="https://archive.org/details/WAQmkaim">
     ماذا خسر العالم بانحطاط المسلمين</a></li> */}
@@ -93,7 +104,6 @@ const HomePage = () => {
 </div>
 </div>
 </div>
-
     </Fragment>
     );
 }

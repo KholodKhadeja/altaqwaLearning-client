@@ -24,11 +24,17 @@ const AccordionItemComponent = ({key,lessonName, youtubeUrl, pdfLink, pdfDesc, v
             <img src="https://raw.githubusercontent.com/KholodKhadeja/Masjed-altaqwa-learning/8c50e78b606104cada5e985a22d07b648b1bb8d2/src/images/Voice.svg"/>
             <p>{vocalDesc}</p></a>
           }
-          { !vocalLink &&  <p className='not-exist-text'>لا يتوفر تسجيل صوتي للدرس</p>}
+          { !vocalLink &&  <p className='lesson-body-lesson'>لا يتوفر تسجيل صوتي للدرس</p>}
           </div>
        </div>
       </div>
+
+
+      
     </div>
+
+
+
   </div>
 </div>
     );
