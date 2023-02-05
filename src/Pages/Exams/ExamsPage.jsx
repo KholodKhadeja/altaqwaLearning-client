@@ -3,7 +3,7 @@ import React from 'react';
 const ExamsPage = () => {
     return (
         <div>
-            Exams page
+           لا تتوفر حاليًا اختبارات
         </div>
     );
 }

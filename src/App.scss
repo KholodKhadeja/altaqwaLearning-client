@@ -1,7 +1,15 @@
 .App {
   text-align: center;
 }
+//////variables
+$primary-green: #14955F;
+$light-sugar: #FBF9F9;
+$basic-gray:#D9D9D9;
+$basic-black: #060606;
+$basic-white:#FFFFFF;
 
+$border-radius-v:1em;
+$margin-btm:1.5em;
 .accordion-button{
   width: fit-content  !important;
   justify-self: flex-start !important;
@@ -30,6 +38,19 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.login-div{
+  padding: 1em !important;
+  p{
+    font-weight: bolder;
+    color: $primary-green;
+    font-size: 16pt !important;
+  }
+  font-size: 12pt;
+  display: flex;flex-direction: column;
+  width: 45vw !important;
+  justify-content:center;text-align: right;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -67,12 +88,3 @@
 width: 15em !important;
 
 }
-//////variables
-  $primary-green: #14955F;
-  $light-sugar: #FBF9F9;
-  $basic-gray:#D9D9D9;
-  $basic-black: #060606;
-  $basic-white:#FFFFFF;
-
-  $border-radius-v:1em;
-  $margin-btm:1.5em;

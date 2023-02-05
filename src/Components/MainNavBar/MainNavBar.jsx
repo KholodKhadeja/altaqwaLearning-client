@@ -1,7 +1,39 @@
 import React, { Fragment } from 'react';
 import "./mainnavbarstyle.scss";
+import PartialNavLinkComponent from './PartialNavLinkComponent';
+import { NavLink } from 'react-router-dom';
 
 const MainNavBar = () => {
+
+  const links=[
+    {
+      label: "الرئيسية",
+      url: "/home",
+    },
+    {
+      label: "اختبارات",
+      url: "/exams",
+    },
+    {
+      label: "تسجيل الدخول",
+      url: "/login",
+    },
+  ];
+  const loginedAdminlinks=[
+    {
+      label: "الرئيسية",
+      url: "/home",
+    },
+    {
+      label: "اختبارات",
+      url: "/exams",
+    },
+    {
+      label: "ادارةالموقع",
+      url: "/adminpage",
+    },
+  ];
+
     return (
         <Fragment >
 <nav className="navbar navbar-expand-lg  navbarStyling">
@@ -13,16 +45,17 @@ const MainNavBar = () => {
     </button>
 </div>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav  mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active fs-6 text"href="#">الرئيسية</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link fs-6 text" href="#">اختبارات</a>
-        </li>
-        <li className="nav-item">
-        <button type="button" className="fs-6 text btn btn-login btn-success">تسجيل الدخول</button>
-        </li>
+      <ul className="navbar-nav  mb-2 mb-lg-0 small-nav">
+      {links.map((item, idx) => (
+        item.url !== "/login" ? (<PartialNavLinkComponent
+                key={"navlinks" + idx}
+                label={item.label}
+                link={item.url}
+              />) : ( <li className="nav-item">
+              <button type="button" className="fs-6 text btn btn-login btn-success">
+                <NavLink className="login-btn-link" to={item.url}>تسجيل الدخول</NavLink></button>
+              </li>)
+            ))}
       </ul>
     </div>
 </nav>

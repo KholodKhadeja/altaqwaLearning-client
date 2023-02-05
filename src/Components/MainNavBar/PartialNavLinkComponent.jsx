@@ -1,10 +1,16 @@
-import React from 'react';
+import { NavLink } from "react-router-dom";
 
-const PartialNavLinkComponent = () => {
+const PartialNavLinkComponent = ({label, link}) => {
     return (
-        <div>
-            
-        </div>
+        <li className="nav-item">
+        <NavLink
+          className="nav-link"
+          to={link}
+          isActive={(match, location) => match && match.isExact}
+        >
+          {label}
+        </NavLink>
+      </li>
     );
 }
 

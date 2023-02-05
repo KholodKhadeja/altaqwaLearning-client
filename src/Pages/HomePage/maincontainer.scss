@@ -1,7 +1,7 @@
 @import "../../App.scss";
 
-.nav{
-    font-size: fs-6 text !important;
+.main-nav{
+    font-size: fs-6!important;
     border-top-left-radius: $border-radius-v;
     border-top-right-radius: $border-radius-v;
     padding: 0.5em !important;
@@ -31,8 +31,8 @@
 }
 
 .tab-content{
-    // border-bottom: none !important;
     border: none !important;
+    min-height: 45vh !important;
 }
 .youtube-vid{
     width: 25em;
