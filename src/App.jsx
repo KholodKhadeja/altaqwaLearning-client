@@ -8,6 +8,7 @@ import { Switch } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import LoginPage from 'Pages/LoginPage/LoginPage';
 import ExamsPage from 'Pages/Exams/ExamsPage';
+import AdminPage from 'Pages/Admin/AdminPage';
 
 
 function App() {
@@ -16,9 +17,11 @@ function App() {
        <MainNavBar />
        <ImageSection />
        <Switch>
-      <Route path="/" component={HomePage}></Route>
+      <Route exact path="/" component={HomePage}></Route>
+      <Route exact path="/home" component={HomePage}></Route>
       <Route path="/login" component={LoginPage}></Route>
       <Route path="/exams" component={ExamsPage}></Route>
+      <Route path="/admin" component={AdminPage}></Route>
       </Switch>
     </div>
   );

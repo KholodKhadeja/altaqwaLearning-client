@@ -16,7 +16,7 @@ const HomePage = () => {
             let { data } = await axios.get("api/lessons");
             lessonsArray = data;
             setCurrentLessons(lessonsArray);
-            console.log(data[0]);
+            // console.log(data[0]);
           } catch (err) {
           }
         })();
@@ -73,7 +73,7 @@ const HomePage = () => {
     </Spinner>)} 
     <Accordion defaultActiveKey="0">
      {  lessonsArray.length !==0 && currentLessons.map((item, index)=>(
-        <NewAccordionItem key={"less"+index}
+        <NewAccordionItem
         eventKey={index + 1}
         lessonName={item.lessonName}
         youtubeUrl={item.youtubeUrl}
