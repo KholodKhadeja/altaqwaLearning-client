@@ -4,6 +4,7 @@ import AccordionItemComponent from "../../Components/AccordionItem/AccordionItem
 import "./maincontainer.scss";
 import { Accordion } from "react-bootstrap";
 import NewAccordionItem from "Components/AccordionItem/NewAccordionItem";
+import Spinner from 'react-bootstrap/Spinner';
 
 let lessonsArray = [];
 const HomePage = () => {
@@ -66,8 +67,12 @@ const HomePage = () => {
     لمعاينة المستندات المرفقة لكل درس، يجب النقر على عنوان كل درس،    <br/>
     تتوفر مستندات  تلخيصيّة لمحاضرة الفقة ومحاضرة العقيدة كل على حدة.
      </p>
+     {
+     lessonsArray.length ==0 && (<Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner>)} 
     <Accordion defaultActiveKey="0">
-      {currentLessons.map((item, index)=>(
+     {  lessonsArray.length !==0 && currentLessons.map((item, index)=>(
         <NewAccordionItem key={"less"+index}
         eventKey={index + 1}
         lessonName={item.lessonName}
@@ -77,8 +82,7 @@ const HomePage = () => {
          vocalLink={item.vocalLink}
           vocalDesc={item.vocalDesc}
           num={item.num}
-        />
-    ))}
+        />))}
     </Accordion>
 </div>
 

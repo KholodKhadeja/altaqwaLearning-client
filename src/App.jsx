@@ -16,7 +16,7 @@ function App() {
        <MainNavBar />
        <ImageSection />
        <Switch>
-      <Route path="/home" component={HomePage}></Route>
+      <Route path="/" component={HomePage}></Route>
       <Route path="/login" component={LoginPage}></Route>
       <Route path="/exams" component={ExamsPage}></Route>
       </Switch>

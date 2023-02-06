@@ -51,7 +51,7 @@ const MainNavBar = () => {
                 key={"navlinks" + idx}
                 label={item.label}
                 link={item.url}
-              />) : ( <li className="nav-item">
+              />) : ( <li className="nav-item" key={"stam"}>
               <button type="button" className="fs-6 text btn btn-login btn-success">
                 <NavLink className="login-btn-link" to={item.url}>تسجيل الدخول</NavLink></button>
               </li>)
